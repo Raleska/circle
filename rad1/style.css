@@ -1,0 +1,613 @@
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 3;
+}
+
+* {
+  Box-sizing: Border-box;
+}
+
+/*
+      Created on : 22-Jun-2015, 13:00:20
+      Author     : probinson
+      Based on    : https://codepen.io/schoenwaldnils/pen/JnIKA
+  */
+/*
+      following functions from
+      https://unindented.org/articles/trigonometry-in-sass/
+  */
+.circular-menu-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: none;
+  width: auto;
+}
+
+.circular-menu {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  left: 50%;
+  margin: 0;
+  margin-left: -300px;
+  overflow: hidden;
+  border-radius: 500px;
+  border-radius: 50%;
+  z-index: 1;
+  list-style: none;
+  -webkit-box-shadow: 0px 0px 15px #0f5bff;
+          box-shadow: 0px 0px 15px #0f5bff;
+}
+
+.center-section {
+  width: 360px;
+  height: 360px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -180px;
+  margin-left: -180px;
+  padding: 0px;
+  border-radius: 500px;
+  border-radius: 50%;
+  text-align: center;
+  background: #fff;
+  -webkit-box-shadow: inset 0px 0px 15px #0077ff;
+          box-shadow: inset 0px 0px 15px #0077ff;
+  z-index: 1;
+}
+
+.center-section.section-intro {
+  display: block;
+}
+
+.circular-menu li:hover ~ .center-section.section-intro,
+.touch .circular-menu li:focus ~ .center-section.section-intro {
+  display: none;
+}
+
+.touch .circular-menu li:focus {
+  outline: 0;
+}
+
+.circular-menu li div.label {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  z-index: 2;
+}
+
+.circular-menu li div.label p {
+  text-align: center;
+  max-width: 118.8px;
+  margin: 0 auto;
+  margin-top: 72px;
+  color: #fff;
+}
+
+.circular-menu li span.arrow {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: block;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  z-index: 2;
+}
+
+.circular-menu li .bg {
+  width: 350px;
+  height: 300px;
+  position: absolute;
+  -webkit-transform-origin: 0 300px;
+          transform-origin: 0 300px;
+  margin-top: -300px;
+  left: 50%;
+  top: 50%;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.circular-menu li {
+  position: absolute;
+  text-decoration: none;
+  top: 50%;
+  left: 50%;
+  display: none;
+}
+
+.flo:hover img {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-box-shadow: 0px 0px 15px #2b6eff;
+          box-shadow: 0px 0px 15px #2b6eff;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.circular-menu li:nth-child(1) {
+  display: block;
+}
+
+.circular-menu li:nth-child(1) .bg {
+  -webkit-transform: rotate(-75deg) skew(-60deg);
+          transform: rotate(-75deg) skew(-60deg);
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(1):hover .bg,
+.touch .circular-menu li:nth-child(1):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(1) span.arrow {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin: -225px 0 0 -15px;
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(1):hover span.arrow,
+.touch .circular-menu li:nth-child(1):focus span.arrow {
+  background: white;
+  margin: -195px 0 0 -15px;
+}
+
+.circular-menu li:nth-child(1) div.label {
+  margin: -330px 0 0 -90px;
+}
+
+.circular-menu li:nth-child(1):hover div.center-section.section-1,
+.touch .circular-menu li:nth-child(1):focus div.center-section.section-1 {
+  display: block;
+}
+
+.circular-menu li:nth-child(2) {
+  display: block;
+}
+
+.circular-menu li:nth-child(2) .bg {
+  -webkit-transform: rotate(-45deg) skew(-60deg);
+          transform: rotate(-45deg) skew(-60deg);
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(2):hover .bg,
+.touch .circular-menu li:nth-child(2):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(2) span.arrow {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  margin: -196.86533px 0 0 90px;
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(2):hover span.arrow,
+.touch .circular-menu li:nth-child(2):focus span.arrow {
+  background: white;
+  margin: -170.88457px 0 0 75px;
+}
+
+.circular-menu li:nth-child(2) div.label {
+  margin: -297.8461px 0 0 30px;
+}
+
+.circular-menu li:nth-child(2):hover div.center-section.section-2,
+.touch .circular-menu li:nth-child(2):focus div.center-section.section-2 {
+  display: block;
+}
+
+.circular-menu li:nth-child(3) {
+  display: block;
+}
+
+.circular-menu li:nth-child(3) .bg {
+  -webkit-transform: rotate(-15deg) skew(-60deg);
+          transform: rotate(-15deg) skew(-60deg);
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(3):hover .bg,
+.touch .circular-menu li:nth-child(3):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(3) span.arrow {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  margin: -120px 0 0 166.86533px;
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(3):hover span.arrow,
+.touch .circular-menu li:nth-child(3):focus span.arrow {
+  background: white;
+  margin: -105px 0 0 140.88457px;
+}
+
+.circular-menu li:nth-child(3) div.label {
+  margin: -210px 0 0 117.8461px;
+}
+
+.circular-menu li:nth-child(3):hover div.center-section.section-3,
+.touch .circular-menu li:nth-child(3):focus div.center-section.section-3 {
+  display: block;
+}
+
+.circular-menu li:nth-child(4) {
+  display: block;
+}
+
+.circular-menu li:nth-child(4) .bg {
+  -webkit-transform: rotate(15deg) skew(-60deg);
+          transform: rotate(15deg) skew(-60deg);
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(4):hover .bg,
+.touch .circular-menu li:nth-child(4):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(4) span.arrow {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: -15px 0 0 195px;
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(4):hover span.arrow,
+.touch .circular-menu li:nth-child(4):focus span.arrow {
+  background: white;
+  margin: -15px 0 0 165px;
+}
+
+.circular-menu li:nth-child(4) div.label {
+  margin: -90px 0 0 150px;
+}
+
+.circular-menu li:nth-child(4):hover div.center-section.section-4,
+.touch .circular-menu li:nth-child(4):focus div.center-section.section-4 {
+  display: block;
+}
+
+.circular-menu li:nth-child(5) {
+  display: block;
+}
+
+.circular-menu li:nth-child(5) .bg {
+  -webkit-transform: rotate(45deg) skew(-60deg);
+          transform: rotate(45deg) skew(-60deg);
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(5):hover .bg,
+.touch .circular-menu li:nth-child(5):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(5) span.arrow {
+  -webkit-transform: rotate(75deg);
+          transform: rotate(75deg);
+  margin: 90px 0 0 166.86533px;
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(5):hover span.arrow,
+.touch .circular-menu li:nth-child(5):focus span.arrow {
+  background: white;
+  margin: 75px 0 0 140.88457px;
+}
+
+.circular-menu li:nth-child(5) div.label {
+  margin: 30px 0 0 117.8461px;
+}
+
+.circular-menu li:nth-child(5):hover div.center-section.section-5,
+.touch .circular-menu li:nth-child(5):focus div.center-section.section-5 {
+  display: block;
+}
+
+.circular-menu li:nth-child(6) {
+  display: block;
+}
+
+.circular-menu li:nth-child(6) .bg {
+  -webkit-transform: rotate(75deg) skew(-60deg);
+          transform: rotate(75deg) skew(-60deg);
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(6):hover .bg,
+.touch .circular-menu li:nth-child(6):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(6) span.arrow {
+  -webkit-transform: rotate(105deg);
+          transform: rotate(105deg);
+  margin: 166.86533px 0 0 90px;
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(6):hover span.arrow,
+.touch .circular-menu li:nth-child(6):focus span.arrow {
+  background: white;
+  margin: 140.88457px 0 0 75px;
+}
+
+.circular-menu li:nth-child(6) div.label {
+  margin: 117.8461px 0 0 30px;
+}
+
+.circular-menu li:nth-child(6):hover div.center-section.section-6,
+.touch .circular-menu li:nth-child(6):focus div.center-section.section-6 {
+  display: block;
+}
+
+.circular-menu li:nth-child(7) {
+  display: block;
+}
+
+.circular-menu li:nth-child(7) .bg {
+  -webkit-transform: rotate(105deg) skew(-60deg);
+          transform: rotate(105deg) skew(-60deg);
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(7):hover .bg,
+.touch .circular-menu li:nth-child(7):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(7) span.arrow {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin: 195px 0 0 -15px;
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(7):hover span.arrow,
+.touch .circular-menu li:nth-child(7):focus span.arrow {
+  background: white;
+  margin: 165px 0 0 -15px;
+}
+
+.circular-menu li:nth-child(7) div.label {
+  margin: 150px 0 0 -90px;
+}
+
+.circular-menu li:nth-child(7):hover div.center-section.section-7,
+.touch .circular-menu li:nth-child(7):focus div.center-section.section-7 {
+  display: block;
+}
+
+.circular-menu li:nth-child(8) {
+  display: block;
+}
+
+.circular-menu li:nth-child(8) .bg {
+  -webkit-transform: rotate(135deg) skew(-60deg);
+          transform: rotate(135deg) skew(-60deg);
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(8):hover .bg,
+.touch .circular-menu li:nth-child(8):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(8) span.arrow {
+  -webkit-transform: rotate(165deg);
+          transform: rotate(165deg);
+  margin: 166.86533px 0 0 -120px;
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(8):hover span.arrow,
+.touch .circular-menu li:nth-child(8):focus span.arrow {
+  background: white;
+  margin: 140.88457px 0 0 -105px;
+}
+
+.circular-menu li:nth-child(8) div.label {
+  margin: 117.8461px 0 0 -210px;
+}
+
+.circular-menu li:nth-child(8):hover div.center-section.section-8,
+.touch .circular-menu li:nth-child(8):focus div.center-section.section-8 {
+  display: block;
+}
+
+.circular-menu li:nth-child(9) {
+  display: block;
+}
+
+.circular-menu li:nth-child(9) .bg {
+  -webkit-transform: rotate(165deg) skew(-60deg);
+          transform: rotate(165deg) skew(-60deg);
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(9):hover .bg,
+.touch .circular-menu li:nth-child(9):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(9) span.arrow {
+  -webkit-transform: rotate(195deg);
+          transform: rotate(195deg);
+  margin: 90px 0 0 -196.86533px;
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(9):hover span.arrow,
+.touch .circular-menu li:nth-child(9):focus span.arrow {
+  background: white;
+  margin: 75px 0 0 -170.88457px;
+}
+
+.circular-menu li:nth-child(9) div.label {
+  margin: 30px 0 0 -297.8461px;
+}
+
+.circular-menu li:nth-child(9):hover div.center-section.section-9,
+.touch .circular-menu li:nth-child(9):focus div.center-section.section-9 {
+  display: block;
+}
+
+.circular-menu li:nth-child(10) {
+  display: block;
+}
+
+.circular-menu li:nth-child(10) .bg {
+  -webkit-transform: rotate(195deg) skew(-60deg);
+          transform: rotate(195deg) skew(-60deg);
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(10):hover .bg,
+.touch .circular-menu li:nth-child(10):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(10) span.arrow {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  margin: -15.0px 0 0 -225.0px;
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(10):hover span.arrow,
+.touch .circular-menu li:nth-child(10):focus span.arrow {
+  background: white;
+  margin: -15.0px 0 0 -195.0px;
+}
+
+.circular-menu li:nth-child(10) div.label {
+  margin: -90.0px 0 0 -330.0px;
+}
+
+.circular-menu li:nth-child(10):hover div.center-section.section-10,
+.touch .circular-menu li:nth-child(10):focus div.center-section.section-10 {
+  display: block;
+}
+
+.circular-menu li:nth-child(11) {
+  display: block;
+}
+
+.circular-menu li:nth-child(11) .bg {
+  -webkit-transform: rotate(225deg) skew(-60deg);
+          transform: rotate(225deg) skew(-60deg);
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(11):hover .bg,
+.touch .circular-menu li:nth-child(11):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(11) span.arrow {
+  -webkit-transform: rotate(255deg);
+          transform: rotate(255deg);
+  margin: -120.0px 0 0 -196.86533px;
+  background: #ffffff;
+}
+
+.circular-menu li:nth-child(11):hover span.arrow,
+.touch .circular-menu li:nth-child(11):focus span.arrow {
+  background: white;
+  margin: -105.0px 0 0 -170.88457px;
+}
+
+.circular-menu li:nth-child(11) div.label {
+  margin: -210.0px 0 0 -297.8461px;
+}
+
+.circular-menu li:nth-child(11):hover div.center-section.section-11,
+.touch .circular-menu li:nth-child(11):focus div.center-section.section-11 {
+  display: block;
+}
+
+.circular-menu li:nth-child(12) {
+  display: block;
+}
+
+.circular-menu li:nth-child(12) .bg {
+  -webkit-transform: rotate(255deg) skew(-60deg);
+          transform: rotate(255deg) skew(-60deg);
+  background: #fff;
+}
+
+.circular-menu li:nth-child(12):hover .bg,
+.touch .circular-menu li:nth-child(12):focus .bg {
+  background: white;
+}
+
+.circular-menu li:nth-child(12) span.arrow {
+  -webkit-transform: rotate(285deg);
+          transform: rotate(285deg);
+  margin: -196.86533px 0 0 -119.99999px;
+  background: #fff;
+}
+
+.circular-menu li:nth-child(12):hover span.arrow,
+.touch .circular-menu li:nth-child(12):focus span.arrow {
+  background: white;
+  margin: -170.88457px 0 0 -104.99999px;
+}
+
+.circular-menu li:nth-child(12) div.label {
+  margin: -297.8461px 0 0 -209.99999px;
+}
+
+.circular-menu li:nth-child(12):hover div.center-section.section-12,
+.touch .circular-menu li:nth-child(12):focus div.center-section.section-12 {
+  display: block;
+}
+
+.animated {
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+/*# sourceMappingURL=style.css.map */
